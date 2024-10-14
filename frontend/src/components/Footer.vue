@@ -6,21 +6,24 @@
           <div className="about">
             <div className="social-media">
               <ul className="social-list">
-                <li><a href="https://github.com/SwishSwishBish" title="" target="_blank"><img
-                      src="https://img.icons8.com/ios/35/undefined/github--v1.png" /></a></li>
-                <li><a href="https://www.linkedin.com/in/sena-atak%C3%B6%C5%9Fker-3a79b0235/" title=""
-                    target="_blank"><img src="https://img.icons8.com/ios/35/undefined/linkedin-circled--v1.png" /></a>
-                </li>
-                <li><a href="https://twitter.com/SenaAtakosker" title="" target="_blank"><img
-                      src="https://img.icons8.com/ios/35/undefined/twitter-circled--v1.png" /></a></li>
-                <li><a href="https://www.facebook.com/theyoungturk/" title="" target="_blank"><img
-                      src="https://img.icons8.com/ios/35/undefined/facebook-circled--v1.png" /></a></li>
+                <!-- Modify Link and icon for the web --- Jiawen Li 141024 -->
+                <li><a href="https://github.com/lijing-code/CSCI6806Team15-frontend" title="" target="_blank"><img
+                      src="../assets/github.png" /></a></li>
+                <li><a href="https://ca.linkedin.com/" title="" target="_blank"><img
+                      src="../assets/linkedin.png" /></a></li>
+                <li><a href="https://twitter.com/" title="" target="_blank"><img
+                      src="../assets/twitter.png" /></a></li>
+                <li><a href="https://www.facebook.com/" title="" target="_blank"><img
+                      src="../assets/facebook.png" /></a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Add Space Line --- Jiawen Li 141024 -->
+    <br>
 
     <section className="copyright">
       <div className="container">
@@ -41,17 +44,18 @@ export default {
 </script>
 
 <style>
+/* Modify icon format --- Jiawen Li 141024 */
 .social-list {
-  display: flex;
   list-style: none;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 30px;
   padding: 0;
 }
 
 .social-list li {
-  padding: 7px;
-  color: #fca552;
-  font-size: 19px;
+  margin: 0 10px;
 }
 
 footer.nb-footer {
