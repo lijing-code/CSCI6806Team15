@@ -4,10 +4,16 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" height="650" src="../assets/home.png" alt="First slide">
+          <!-- Adding Car information Http to the picture --- Jiawen Li 141024 -->
+          <a href="https://en.wikipedia.org/wiki/Toyota_RAV4" target="_blank">
+          <img class="d-block w-100" height="650" src="../assets/rav4.png" alt="First slide">
+          </a>
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" height="650" src="../assets/home2.png" alt="First slide">
+          <!-- Adding Car information Http to the picture --- Jiawen Li 141024 -->
+          <a href="https://en.wikipedia.org/wiki/Honda_Civic" target="_blank">
+          <img class="d-block w-100" height="650" src="../assets/civic.png" alt="First slide">
+          </a>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -77,6 +83,19 @@ export default {
 </script>
 
 <style>
+/* Add style to home page --- Jiawen Li 141024 */
+#home {
+  background-color: transparent;
+  min-height: 100vh;
+}
+
+.carousel-inner img {
+  border-radius: 20px;
+  width: 80%;
+  /* height: auto; */
+  object-fit: cover;
+}
+
 .page-holder {
   min-height: 100vh;
 }
@@ -87,5 +106,35 @@ export default {
 
 h2 {
   font-family: 'Josefin Sans', sans-serif;
+}
+
+/* For the image in the carousel */
+.custom-carousel-img {
+  max-width: 85%; /* Set max-width to limit image size */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image horizontally */
+  display: block;
+}
+
+/* Add margin to the sides of the carousel */
+.carousel-inner {
+  padding: 0 300px;
+}
+
+/* Adjust the arrows */
+.custom-arrow {
+  width: 80px; /* Make the arrow bigger */
+  height: 80px;
+  top: 50%; /* Center the arrow vertically */
+  transform: translateY(-50%); /* Align it vertically */
+  margin-left: -50px;
+  margin-right: -50px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgb(42, 149, 165); /* Change arrow color */
+  background-size: 100%; /* Adjust the size */
+  border-radius: 50%; /* Make the arrows circular */
 }
 </style>
