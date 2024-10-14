@@ -9,6 +9,9 @@
         <h4>{{ product.name }}</h4>
         <h6 class="category font-italic">{{ category.categoryName }}</h6>
         <h6 class="font-weight-bold">$ {{ product.price }}</h6>
+        <!-- Modify features' position to be above the Description --- Jiawen Li 141024 -->
+        <br>
+        <h5><strong>Features</strong></h5>
         <p>
           {{ product.description }}
         </p>
@@ -29,16 +32,8 @@
           </div>
         </div>
 
-        <div class="features pt-3">
-          <h5><strong>Features</strong></h5>
-          <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Officia quas, officiis eius magni error magnam voluptatem</li>
-            <li>nesciunt quod! Earum voluptatibus quaerat dolorem doloribus</li>
-            <li>molestias ipsum ab, ipsa consectetur laboriosam soluta et</li>
-            <li>ut doloremque dolore corrupti, architecto iusto beatae.</li>
-          </ul>
-        </div>
+        <!-- Add Space line --- Jiawen Li 141024 -->
+        <br>
 
         <button id="wishlist-button" class="btn mr-3 p-1 py-0" :class="{ product_added_wishlist: isAddedToWishlist }"
           @click="addToWishList(this.id)">
