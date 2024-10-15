@@ -27,6 +27,8 @@ import Success from '../helper/payment/Success.vue'
 import Failed from '../helper/payment/Failed.vue'
 
 import OrderDetails from "../views/Orders/OrderDetails";
+// search
+import SearchResults from '../views/SearchResults.vue';
 
 const routes = [
   {
@@ -102,6 +104,14 @@ const routes = [
     name : 'ListProducts',
     component: ListProducts
   },
+  
+  //Search results route
+  {
+    path: '/search',
+    name: 'SearchResults',
+    component: SearchResults
+  },
+
   //Page Not found
   {
     path : '/:catchAll(.*)',
