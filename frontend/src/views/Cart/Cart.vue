@@ -5,9 +5,8 @@
         <h3 class="pt-3">Shopping cart</h3>
       </div>
     </div>
-    <!--    loop over all the cart items and display one by one-->
-   // <div v-for="cartItem in cartItems" :key="cartItem.product.id" class="row mt-2 pt-3 justify-content-around">
-    <div v-for="cartItem in cartItems" :key="cartItem.id" class="row mt-2 pt-3 justify-content-around">//change cartItem.product.id to cartItem.id
+    <!--    loop over all the cart items and display one by one，change cartItem.product.id to cartItem. -->
+    <div v-for="cartItem in cartItems" :key="cartItem.product.id" class="row mt-2 pt-3 justify-content-around">
       <div class="col-2"></div>
       <!-- display image -->
       <div class="col-md-3 embed-responsive embed-responsive-16by9">
@@ -94,12 +93,11 @@ export default {
     },
     deleteItem(itemId) {
       axios
-        //.delete(`${this.baseURL}cart/delete/${itemId}/?token=${this.token} `)
-        delete(`${this.baseURL}cart/delete/${itemId}?token=${this.token} `)//delete the "/ " before "?token"
+        .delete(`${this.baseURL}cart/delete/${itemId}?token=${this.token} `) //delete / before ?token
         .then(
           (response) => {
             if (response.status == 200) {
-              //this.$router.go(0); This code doesn't work,change to the next two rows code.
+              //this.$router.go(0);delete this, change to the next two rows
               this.cartItems = this.cartItems.filter(item => item.id !== itemId);
               this.totalcost = this.cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0);
             }
