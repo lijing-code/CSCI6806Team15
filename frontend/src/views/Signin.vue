@@ -38,7 +38,7 @@
               <br/>
               Center Group 15 Account</router-link> -->
               <router-link :to="{ name: 'Signup' }" class="create-btn btn btn-dark text-center px-5 py-1 mb-2">Create Your
-              Automobile Trading</router-link>
+              Automobile Trading Account</router-link>
 
               <!-- wt edit 14-42 line -->
           </p>
