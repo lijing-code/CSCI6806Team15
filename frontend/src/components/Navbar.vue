@@ -80,8 +80,12 @@
         <li class="nav-item">
           <div id="cart">
             <span id="nav-cart-count">{{ cartCount }}</span>
-            <router-link class="color-cart" :to="{ name: 'Cart' }"><i class="fa fa-shopping-cart"
-                style="font-size:36px"></i>Cart</router-link>
+            <!-- <router-link class="color-cart" :to="{ name: 'Cart' }"><i class="fa fa-shopping-cart"
+                style="font-size:36px"></i><span>Cart</span></router-link> -->
+                <router-link class="color-cart" :to="{ name: 'Cart' }">
+                  <span><i class="fa fa-shopping-cart" style="font-size:36px"></i>
+                  Cart</span>
+                </router-link>
           </div>
         </li>
       </ul>
