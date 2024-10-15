@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import CategoryBox from '../../components/Category/CategoryBox';
 export default {
   name: 'Category',

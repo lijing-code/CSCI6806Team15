@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import ProductBox from '../../components/Product/ProductBox';
 export default {
   name: 'ListProducts',

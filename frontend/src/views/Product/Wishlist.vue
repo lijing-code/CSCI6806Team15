@@ -18,6 +18,7 @@
 
 <script>
 import ProductBox from '../../components/Product/ProductBox';
+import axios from 'axios';
 export default {
   data() {
       return {
