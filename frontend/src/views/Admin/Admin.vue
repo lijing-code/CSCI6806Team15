@@ -6,18 +6,18 @@
       <router-link :to="{name : 'AdminCategory'}">
         <button type="button" class="btn btn-primary btn-lg">Admin Categories</button>
       </router-link>
-      <router-link :to="{name : 'Gallery'}">
+     <!-- <router-link :to="{name : 'Gallery'}">
         <button type="button" class="btn btn-primary btn-lg">Admin Gallery</button>
-      </router-link>
+      </router-link>  --> 
   </div>
 </template>
 
 <script>
 export default {
   mounted() {
-    if (!localStorage.getItem('token')) {
-      this.$router.push({name : 'Signin'});
-    }
+   // if (!localStorage.getItem('token')) {
+   //   this.$router.push({name : 'Signin'});
+   // }
   }
 }
 </script>
@@ -33,4 +33,11 @@ export default {
   width: fit-content;
   margin: 55px 0;
 }
+.router-text{
+  color: orange;
+  font-size: 30px;
+  margin-top: 95px;
+  font-weight: bold;
+}
+  
 </style>
