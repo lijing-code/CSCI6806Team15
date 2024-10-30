@@ -15,7 +15,7 @@
           <h2 class="text-center pt-4 pl-4">Create Account</h2>
           <form @submit="signup" class="text-center pt-4 pl-4 pr-4">
             <div class="form-group">
-              <label>e-Mail</label>
+              <label>E-Mail</label>
               <input type="email" class="form-control" v-model="email" required />
             </div>
             <div class="form-row">
@@ -47,7 +47,7 @@
           <hr />
           <small class="form-text text-muted pt-2 pl-4 text-center">Already Have an Account?</small>
           <p class="text-center">
-            <router-link class="btn btn-dark text-center mx-auto px-5 py-1 mb-2" :to="{ name: 'Signin' }">Signin Here
+            <router-link class="btn btn-dark text-center mx-auto px-5 py-1 mb-2" :to="{ name: 'Signin' }">Sign In Here
             </router-link>
           </p>
         </div>

@@ -31,16 +31,10 @@
             </button>
           </form>
           <hr />
-          <!-- <small class="form-text text-muted pt-2 pl-4 text-center">New to Automobile Trading Center Group 15?</small> -->
+          <small class="form-text text-muted pt-2 pl-4 text-center">New to Automobile Trading Center Group 15?</small>
           <p class="text-center">
-            <!-- <router-link :to="{ name: 'Signup' }" class="create-btn btn btn-dark text-center px-5 py-1 mb-2">Create Your
-              Automobile Trading
-              <br/>
-              Center Group 15 Account</router-link> -->
-              <router-link :to="{ name: 'Signup' }" class="create-btn btn btn-dark text-center px-5 py-1 mb-2">Create Your
-              Automobile Trading Account</router-link>
-
-              <!-- wt edit 14-42 line -->
+            <router-link class="btn btn-dark text-center mx-auto px-5 py-1 mb-2" :to="{ name: 'Signup' }">Create Your Automobile Trading Account
+            </router-link>
           </p>
         </div>
       </div>
