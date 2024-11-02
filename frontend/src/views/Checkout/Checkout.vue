@@ -13,10 +13,14 @@
   </div>
 </template>
 <script>
+
+import axios from 'axios';//jiaru
+import {loadStripe} from "@stripe/stripe-js"; // 导入 Axios，用于 HTTP 请求 AT
 export default {
   data() {
     return {
-      stripeAPIToken: process.env.VUE_APP_STRIPETOKEN,
+      stripeAPIToken: 'pk_test_51Q4X7GRp4GPDgUggxaGdEI2Vp1a0DlzWnkjQmDkTVBeHkF0d54OjFCyj8F7zKPil6jnOVplXM77XpYP0Z2pp3Apu00QnMA9GnQ',
+      baseURL: 'http://localhost:8080/',
       stripe: '',
       token: null,
       sessionId: null,
@@ -32,7 +36,7 @@ export default {
     getAllItems() {
       axios.get(`${this.baseURL}cart/?token=${this.token}`).then(
         (response) => {
-          if (response.status == 200) {
+          if (response.status === 200) {
             let products = response.data;
             let len = Object.keys(products.cartItems).length;
             for (let i = 0; i < len; i++)
@@ -45,6 +49,7 @@ export default {
                 userId: products.cartItems[i].userId,
               });
           }
+          console.log(this.checkoutBodyArray); // 输出数据到控制台AT20241231
         },
         (err) => {
           console.log(err);
@@ -53,27 +58,38 @@ export default {
     },
 
     goToCheckout() {
+      console.log('Preparing checkout with data:', this.checkoutBodyArray);//AT 20241101
       axios
         .post(
           this.baseURL + 'order/checkout-session',
           this.checkoutBodyArray
         )
         .then((response) => {
-          localStorage.setItem('sessionId', response.data.sessionId);
-          return response.data;
+          console.log(response.data); // 检查 response 中的数据AT20241101
+          this.sessionId = response.data.sessionId;//AT 20241101
+         //localStorage.setItem('sessionId', response.data.sessionId);AT20241101
+          //return response.data;
+          return response.data.sessionId; // 直接返回 sessionId AT20241101
+
         })
-        .then((session) => {
+        .then((sessionId) => {
+          console.log('Redirecting to checkout with sessionId:', sessionId);
           return this.stripe.redirectToCheckout({
-            sessionId: session.sessionId,
+            sessionId: sessionId,
           });
-        });
+        })
+    .catch((error) => {
+        console.error('Checkout redirection error:', error);
+      });
     },
   },
-  mounted() {
+  async mounted() {
 
     this.token = localStorage.getItem('token');
 
-    this.stripe = Stripe(this.stripeAPIToken);
+   // this.stripe = Stripe(this.stripeAPIToken);AT20241031
+    this.stripe = await loadStripe(this.stripeAPIToken);
+    console.log(this.stripe);//AT 20241101
     this.getAllItems();
   },
 };
