@@ -58,7 +58,7 @@
             <router-link class="dropdown-item" :to="{ name: 'Category' }">Category</router-link>
           </div>
         </li>
-
+        
         <li class="nav-item dropdown">
           <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
