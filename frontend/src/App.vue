@@ -16,9 +16,6 @@ export default {
   data() {
     return {
       baseURL: "http://localhost:8080/",
-      // baseURL:" " if use local = localhost , follow backend choose ip 
-      //eg: For me is ”http：//81.28.156.91：8080/“  this contant fdu wifi  
-      
       products: null,
       categories: null,
       key: 0,

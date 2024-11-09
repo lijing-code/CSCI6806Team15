@@ -30,6 +30,16 @@
               </div>
             </button>
           </form>
+
+          <!-- Google Sign In Button -->
+          <div class="text-center my-3">
+            <button @click="signInWithGoogle" class="btn google-signin-btn">
+            <!-- <button class="btn google-signin-btn"> -->
+              <img src="../assets/GoogleSign.png" alt="Google logo" />
+              Sign in with Google
+            </button>
+          </div>
+
           <hr />
           <small class="form-text text-muted pt-2 pl-4 text-center">New to Automobile Trading Center Group 15?</small>
           <p class="text-center">
@@ -83,7 +93,13 @@ export default {
           this.loading = false;
         });
     },
+
+    signInWithGoogle() {
+      // Redirect to the backend endpoint for Google OAuth2
+      window.location.href = `${this.baseURL}oauth2/authorization/google`;
+    },
   },
+  
   mounted() {
     this.loading = false;
   },
@@ -91,6 +107,23 @@ export default {
 </script>
 
 <style scoped>
+/* Styling for buttons and layout */
+.google-signin-btn {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.google-signin-btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
 .btn-dark {
   background-color: #e7e9ec;
   color: #000;

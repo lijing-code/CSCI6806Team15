@@ -58,7 +58,7 @@
             <router-link class="dropdown-item" :to="{ name: 'Category' }">Category</router-link>
           </div>
         </li>
-        
+
         <li class="nav-item dropdown">
           <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -77,10 +77,6 @@
         <li class="nav-item">
           <router-link class="nav-link text-dark" :to="{ name: 'Order' }">Orders</router-link>
         </li>
-        <li class="nav-item">
-          <router-link class="nav-link text-dark" :to="{ name: 'makeResevation' }">Reservation</router-link>
-        </li>
-         <!--  add resercation on category -->
         <li class="nav-item">
           <div id="cart">
             <span id="nav-cart-count">{{ cartCount }}</span>
