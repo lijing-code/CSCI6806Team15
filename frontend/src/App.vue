@@ -4,6 +4,9 @@
     <router-view v-if="products && categories" :baseURL="baseURL" :products="products" :categories="categories" @fetchData="fetchData" />
   </div>
   <Footer v-if="!['Signup', 'Signin'].includes($route.name)" />
+  <div id="app">
+    <Chatbox /> <!-- Show Chatbox --- Jiawen Li 111124 -->
+  </div>
 </template>
 
 <script>
