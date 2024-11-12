@@ -12,6 +12,7 @@
 <script>
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
+import Chatbox from './components/Chatbox.vue'; // Import Chatbox component --- Jiawen Li 111124
 import axios from 'axios';
 
 export default {
