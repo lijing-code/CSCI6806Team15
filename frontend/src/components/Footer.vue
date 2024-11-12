@@ -29,7 +29,8 @@
       <div className="container">
         <div className="row">
           <div className="col-sm-12 text-center">
-            <p>Copyright © 2022. Sena Atakosker</p>
+            <!-- Modify text --- Jiawen Li 111124 -->
+            <p>Copyright © 2024. CSCI6806 Capstone Project Group 15</p>
           </div>
         </div>
       </div>
