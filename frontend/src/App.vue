@@ -25,7 +25,11 @@ export default {
     };
   },
 
-  components: { Footer, Navbar },
+  components: {
+    Navbar, // Properly register Navbar --- Jiawen Li 111124
+    Footer, // Properly register Footer --- Jiawen Li 111124
+    Chatbox // Properly register Chatbox --- Jiawen Li 111124
+  },
 
   methods: {
     async fetchData() {
