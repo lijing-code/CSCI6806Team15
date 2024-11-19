@@ -8,7 +8,7 @@ export default {
   mounted() {
     // Configuring Chatbox Settings --- Jiawen Li 111124
     window.embeddedChatbotConfig = {
-      chatbotId: "",
+      chatbotId: "nOwzu5FOdgeeffD0xD03X",
       domain: "www.chatbase.co"
     };
 

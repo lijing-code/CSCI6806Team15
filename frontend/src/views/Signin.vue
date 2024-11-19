@@ -94,19 +94,6 @@ export default {
       window.location.href = `/oauth2/authorization/google`;
     },
 
-    // checkOAuthRedirect() {
-    // const urlParams = new URLSearchParams(window.location.search);
-    // const token = urlParams.get("token");
-
-    // console.log("Current URL:", window.location.href); // 添加此行以检查当前 URL
-    // console.log("Extracted token:", token); // 添加此行以确认是否获取到 token
-      // if (token) {
-      //     //     // Store the token and redirect to the homepage
-      //     //     localStorage.setItem("token", token);
-      //     //     this.$emit("fetchData");
-      //     //     this.$router.push({ name: "Home" });
-      //     //     }
-      //     // },
     checkOAuthRedirect() {
       const urlParams = new URLSearchParams(window.location.search);
       const token = urlParams.get("token");
@@ -140,6 +127,7 @@ export default {
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin: 0 auto; /* 添加这行实现水平居中 */
 }
 .google-signin-btn img {
   width: 20px;
