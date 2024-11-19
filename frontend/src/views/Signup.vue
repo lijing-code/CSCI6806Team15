@@ -12,7 +12,13 @@
     <div class="row">
       <div class="col-12 justify-content-center d-flex flex-row pt-5 mt-2">
         <div id="signup-div" class="flex-item border">
-          <h2 class="text-center pt-4 pl-4">Create Account</h2>
+
+          <!-- 用 flexbox 将 "Sign In" 和 QR Code 放在一行 -->
+          <div class="d-flex align-items-center justify-content-center">
+            <h2 class="text-center pt-4 pl-4">Create Account</h2>
+            <img src="../assets/back-end-link.png" alt="description of the image" class="qr-code ml-3">
+          </div>
+          <!-- <h2 class="text-center pt-4 pl-4">Create Account</h2> -->
           <form @submit="signup" class="text-center pt-4 pl-4 pr-4">
             <div class="form-group">
               <label>E-Mail</label>
@@ -108,6 +114,15 @@ export default {
 </script>
 
 <style scoped>
+.qr-code {
+  width: 50px; /* 调整 QR Code 的大小 */
+  height: auto; /* 保持宽高比例 */
+  margin-left: 50px; /* 和 "Sign In" 保持间距 */
+}
+
+h2.text-center {
+  margin: 0; /* 移除多余的顶部和底部间距 */
+}
 .btn-dark {
   background-color: #e7e9ec;
   color: #000;
