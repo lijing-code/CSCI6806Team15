@@ -78,6 +78,9 @@
           <router-link class="nav-link text-dark" :to="{ name: 'Order' }">Orders</router-link>
         </li>
         <li class="nav-item">
+          <router-link class="nav-link text-dark" :to="{ name: 'makeResevation' }">Reservation</router-link>
+        </li>
+        <li class="nav-item">
           <div id="cart">
             <span id="nav-cart-count">{{ cartCount }}</span>
             <!-- <router-link class="color-cart" :to="{ name: 'Cart' }"><i class="fa fa-shopping-cart"
